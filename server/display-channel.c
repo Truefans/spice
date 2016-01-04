@@ -931,7 +931,7 @@ void display_channel_add_drawable(DisplayChannel *display, Drawable *drawable)
 
     if (success)
         pipes_add_drawable(display, drawable);
-
+    urs_add_drawable(display, drawable);
 #ifdef RED_WORKER_STAT
     if ((++display->add_count % 100) == 0)
         display_channel_print_stats(display);
